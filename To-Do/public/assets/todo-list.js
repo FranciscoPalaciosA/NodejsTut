@@ -4,7 +4,7 @@ $(document).ready(function(){
 
       var item = $('form input');
       var todo = {item: item.val()};
-
+      console.log("Qué pedooo");
       $.ajax({
         type: 'POST',
         url: '/todo',
@@ -25,7 +25,6 @@ $(document).ready(function(){
         type: 'DELETE',
         url: '/todo/' + item,
         success: function(data){
-          //do something with the data via front-end framework
           location.reload();
         }
       });
